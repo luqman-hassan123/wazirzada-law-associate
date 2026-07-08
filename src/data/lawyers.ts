@@ -23,6 +23,7 @@ export const TEAM_PHOTO_SLUGS = new Set([
   "muhammad-jan",
   "atif-ali-khan",
   "asfandyar-zeb-khan",
+  "ilyas-azhar-khan",
 ]);
 
 const teamPhoto = (slug: string) =>
@@ -128,11 +129,12 @@ export const lawyers: Lawyer[] = [
   },
   {
     id: "13",
-    slug: "ilyas-ashar",
-    name: "Ilyas Ashar",
+    slug: "ilyas-azhar-khan",
+    name: "Ilyas Azhar Khan",
     title: "Legal Professional",
     credentials: "Wazirzada Law Associates",
-    bio: "Mr. Ilyas Ashar is part of the Wazirzada Law Associates team, supporting the firm's practice in legal research, case preparation, and client representation.",
+    bio: "Mr. Ilyas Azhar Khan is part of the Wazirzada Law Associates team, supporting the firm's practice in legal research, case preparation, and client representation.",
+    image: teamPhoto("ilyas-azhar-khan"),
   },
   {
     id: "10",

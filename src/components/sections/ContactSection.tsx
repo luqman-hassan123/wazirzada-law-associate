@@ -38,7 +38,11 @@ export default function ContactSection() {
     setErrorMessage('')
 
     try {
-      await submitContactForm(data)
+      if (siteConfig.enableContactFormEmail) {
+        await submitContactForm(data)
+      } else {
+        await new Promise((r) => setTimeout(r, 600))
+      }
       reset({ service: contactServiceOptions[0] })
       setSubmitStatus('success')
     } catch (error) {
@@ -49,6 +53,10 @@ export default function ContactSection() {
     }
   }
 
+  const successMessage = siteConfig.enableContactFormEmail
+    ? 'Thank you! Your message has been sent to our team. We will contact you shortly.'
+    : `Thank you! For immediate assistance, please call ${siteConfig.phone} or email ${siteConfig.emails[1]}.`
+
   return (
     <section className="bg-cream-100 section-padding">
       <div className="container-main">
@@ -57,14 +65,6 @@ export default function ContactSection() {
           title="Schedule a Legal Consultation"
           description="Provide your information to discuss your legal requirements with our attorneys."
         />
-
-        {import.meta.env.DEV && (
-          <p className="mx-auto mb-6 max-w-2xl rounded-lg border border-gold-400/30 bg-gold-400/10 px-4 py-2 text-center text-xs text-navy-800">
-            {import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
-              ? 'Test mode: form is connected to Web3Forms. Submissions go to the inbox linked to your access key.'
-              : `Add VITE_WEB3FORMS_ACCESS_KEY to .env — or email ${siteConfig.emails[1]} directly.`}
-          </p>
-        )}
 
         <motion.form
           initial={{ opacity: 0, y: 30 }}
@@ -76,9 +76,7 @@ export default function ContactSection() {
           {submitStatus === 'success' && (
             <div className="mb-6 flex items-start gap-3 rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-800">
               <CheckCircle size={20} className="mt-0.5 shrink-0" />
-              <p>
-                Thank you! Your message has been sent to our team. We will contact you shortly.
-              </p>
+              <p>{successMessage}</p>
             </div>
           )}
 
@@ -159,7 +157,7 @@ export default function ContactSection() {
           <div className="mt-8">
             <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
               <Send size={16} />
-              {isSubmitting ? 'Sending...' : 'Submit'}
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </Button>
           </div>
         </motion.form>
