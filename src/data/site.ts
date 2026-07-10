@@ -5,8 +5,8 @@ export const contactServiceOptions = [...services.map((s) => s.title), 'Others']
 export const siteConfig = {
   name: 'Wazirzada Law Associates',
   tagline: 'Built on Trust. Driven by Results.',
-  /** Form visible on site. Set true after client approval to send emails via Web3Forms (.env key). */
-  enableContactFormEmail: false,
+  /** Form sends consultation requests to info@ via Web3Forms (VITE_WEB3FORMS_ACCESS_KEY in .env). */
+  enableContactFormEmail: true,
   phone: '+92 3215383346',
   phoneLandline: '(051) 6112374',
   email: 'wazirzada@wazirzadalaw.com',

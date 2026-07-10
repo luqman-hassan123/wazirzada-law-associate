@@ -49,9 +49,11 @@ export default function TestimonialCarousel() {
             </div>
             <div className="min-w-0">
               <p className="truncate font-semibold text-navy-900">{testimonial.name}</p>
-              <p className="truncate text-xs text-navy-700/60 sm:text-sm">
-                {testimonial.role}, {testimonial.company}
-              </p>
+              {(testimonial.role || testimonial.company) && (
+                <p className="truncate text-xs text-navy-700/60 sm:text-sm">
+                  {[testimonial.role, testimonial.company].filter(Boolean).join(', ')}
+                </p>
+              )}
             </div>
           </div>
         </motion.div>
