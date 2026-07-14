@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import { siteConfig } from '../../data/site'
 import SiteLogo from '../ui/SiteLogo'
@@ -16,27 +15,6 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-white/60">
               Experienced, skilled, knowledgeable, adept, compassionate.
             </p>
-            <div className="mt-6">
-              <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gold-400">
-                Subscribe Our Newsletter
-              </h4>
-              <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-2 sm:flex-row">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  required
-                  className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:border-gold-400 focus:outline-none"
-                />
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  type="submit"
-                  className="w-full shrink-0 rounded-lg bg-gold-400 px-4 py-2.5 text-sm font-semibold text-navy-900 sm:w-auto"
-                >
-                  Subscribe
-                </motion.button>
-              </form>
-            </div>
           </div>
 
           <div>
