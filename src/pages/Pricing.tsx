@@ -21,12 +21,12 @@ const plans = [
   },
   {
     name: 'Business Retainer',
-    price: 'PKR 75,000',
+    price: 'PKR 100,000',
     period: 'per month',
     description: 'Ongoing legal support for growing businesses and startups.',
     features: [
       'Unlimited email/phone advice',
-      'Contract review (up to 5/month)',
+      'Contract review (up to 2/month)',
       'Regulatory compliance guidance',
       'Priority scheduling',
       'Quarterly legal health check',
