@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Share2 } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import { siteConfig } from '../../data/site'
 import SiteLogo from '../ui/SiteLogo'
 
@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="bg-navy-900 text-white">
       <div className="container-main py-12 sm:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3">
+          <div>
             <div className="mb-4">
               <SiteLogo size="footer" />
             </div>
@@ -58,25 +58,6 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold-400">
-              Follow Us
-            </h4>
-            <ul className="space-y-2">
-              {['Facebook', 'Twitter', 'Instagram', 'LinkedIn'].map((label) => (
-                <li key={label}>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-gold-400"
-                  >
-                    <Share2 size={16} className="shrink-0" />
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold-400">
               Contact Us
             </h4>

@@ -38,42 +38,28 @@ export default function About() {
 
       <section className="section-padding">
         <div className="container-main">
-          <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="min-w-0"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&h=500&fit=crop"
-                alt="Law office"
-                className="w-full max-w-full rounded-xl object-contain shadow-xl sm:rounded-2xl"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="min-w-0"
-            >
-              <SectionHeading
-                subtitle="Our Story"
-                title="Built on Trust. Driven by Results."
-                align="left"
-              />
-              <p className="mb-4 text-sm leading-relaxed text-navy-700/70 sm:text-base">
-                Wazirzada Law Associates is a premier full-service corporate law firm in Pakistan,
-                providing strategic, results-driven legal services across diverse industries and
-                practice areas.
-              </p>
-              <p className="text-sm leading-relaxed text-navy-700/70 sm:text-base">
-                With a team of experienced legal professionals, we deliver practical,
-                client-focused advice designed to address complex legal challenges and support our
-                clients long-term business, financial, and personal objectives.
-              </p>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl"
+          >
+            <SectionHeading
+              subtitle="Our Story"
+              title="Built on Trust. Driven by Results."
+              align="left"
+            />
+            <p className="mb-4 text-sm leading-relaxed text-navy-700/70 sm:text-base">
+              Wazirzada Law Associates is a premier full-service corporate law firm in Pakistan,
+              providing strategic, results-driven legal services across diverse industries and
+              practice areas.
+            </p>
+            <p className="text-sm leading-relaxed text-navy-700/70 sm:text-base">
+              With a team of experienced legal professionals, we deliver practical,
+              client-focused advice designed to address complex legal challenges and support our
+              clients long-term business, financial, and personal objectives.
+            </p>
+          </motion.div>
         </div>
       </section>
 

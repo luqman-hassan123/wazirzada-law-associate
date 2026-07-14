@@ -33,12 +33,16 @@ export const siteConfig = {
       mobile: '+92 345 9871007',
     },
   ],
+  /**
+   * Add real profile URLs when ready (e.g. facebook, linkedin page names).
+   * Leave empty so placeholder/social.com links are not shown in the UI.
+   */
   social: {
-    facebook: 'https://facebook.com',
-    twitter: 'https://twitter.com',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com',
-    gmb: 'https://google.com',
+    facebook: '',
+    twitter: '',
+    instagram: '',
+    linkedin: '',
+    gmb: '',
   },
 }
 
