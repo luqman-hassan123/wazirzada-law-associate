@@ -17,14 +17,14 @@ export const testimonials: Testimonial[] = [
   {
     id: 'muhammad-imran-wusuk',
     quote:
-      'Wazirzada Law Associates provided exceptional legal counsel for our corporate and commercial matters. Their advice was clear, commercially sound, and delivered with a high standard of professionalism. We particularly valued their responsiveness and the practical approach they took in protecting our business interests.',
+      'Wazirzada Law Associates handled our banking and regulatory matters with exceptional professionalism. Their strategic advice helped us navigate complex litigation and achieve a favourable outcome.',
     name: 'Muhammad Imran',
     company: 'WUSUK',
   },
   {
     id: 'muhammad-imran-kail',
     quote:
-      'Working with Wazirzada Law Associates has been a thoroughly professional experience. The team demonstrated strong legal expertise, reliable communication, and a genuine commitment to achieving the best outcome for KAIL. I would recommend their services to any organisation seeking dedicated and capable legal representation.',
+      'The firm provided thorough legal support on our corporate and compliance requirements. Their attention to detail and commitment to our interests were evident throughout the engagement.',
     name: 'Muhammad Imran',
     company: 'KAIL',
   },
