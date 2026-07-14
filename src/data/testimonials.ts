@@ -14,4 +14,18 @@ export const testimonials: Testimonial[] = [
     name: 'Leena Shamshad',
     role: 'Client',
   },
+  {
+    id: 'muhammad-imran-wusuk',
+    quote:
+      'Wazirzada Law Associates provided exceptional legal counsel for our corporate and commercial matters. Their advice was clear, commercially sound, and delivered with a high standard of professionalism. We particularly valued their responsiveness and the practical approach they took in protecting our business interests.',
+    name: 'Muhammad Imran',
+    company: 'WUSUK',
+  },
+  {
+    id: 'muhammad-imran-kail',
+    quote:
+      'Working with Wazirzada Law Associates has been a thoroughly professional experience. The team demonstrated strong legal expertise, reliable communication, and a genuine commitment to achieving the best outcome for KAIL. I would recommend their services to any organisation seeking dedicated and capable legal representation.',
+    name: 'Muhammad Imran',
+    company: 'KAIL',
+  },
 ]
