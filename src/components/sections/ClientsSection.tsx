@@ -73,10 +73,6 @@ export default function ClientsSection() {
                       <h3 className="text-sm font-semibold text-navy-900 sm:text-base">
                         {category.title}
                       </h3>
-                      <p className="text-xs text-navy-700/50">
-                        {category.clients.length} client
-                        {category.clients.length !== 1 ? 's' : ''}
-                      </p>
                     </div>
                   </div>
                   <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="shrink-0">

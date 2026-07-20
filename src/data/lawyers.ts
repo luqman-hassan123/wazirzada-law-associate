@@ -112,10 +112,10 @@ export const lawyers: Lawyer[] = [
   {
     id: "12",
     slug: "asfandyar-zeb-khan",
-    name: "Asfandyar Zeb Khan",
+    name: "Barrister Asfandyar Zeb Khan",
     title: "Legal Professional",
-    credentials: "Wazirzada Law Associates",
-    bio: "Mr. Asfandyar Zeb Khan is a member of the Wazirzada Law Associates team, contributing to the firm's litigation, advisory, and client service work across a range of legal matters.",
+    credentials: "Barrister | Wazirzada Law Associates",
+    bio: "Barrister Asfandyar Zeb Khan is a member of the Wazirzada Law Associates team, contributing to the firm's litigation, advisory, and client service work across a range of legal matters.",
     image: teamPhoto("asfandyar-zeb-khan"),
   },
   {
@@ -130,10 +130,10 @@ export const lawyers: Lawyer[] = [
   {
     id: "13",
     slug: "ilyas-azhar-khan",
-    name: "Ilyas Azhar Khan",
+    name: "Barrister Ilyas Azhar Khan",
     title: "Legal Professional",
-    credentials: "Wazirzada Law Associates",
-    bio: "Mr. Ilyas Azhar Khan is part of the Wazirzada Law Associates team, supporting the firm's practice in legal research, case preparation, and client representation.",
+    credentials: "Barrister | Wazirzada Law Associates",
+    bio: "Barrister Ilyas Azhar Khan is part of the Wazirzada Law Associates team, supporting the firm's practice in legal research, case preparation, and client representation.",
     image: teamPhoto("ilyas-azhar-khan"),
   },
   {

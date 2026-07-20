@@ -15,9 +15,9 @@ export const testimonials: Testimonial[] = [
     role: 'Client',
   },
   {
-    id: 'muhammad-imran-wusuk',
+    id: 'imran-malik',
     quote:
-      'Wazirzada Law Associates handled our banking and regulatory matters with exceptional professionalism. Their strategic advice helped us navigate complex litigation and achieve a favourable outcome.',
+      'Wazirzada Law Associates handled our corporate and regulatory matters with exceptional professionalism. Their strategic advice helped us navigate complex litigation and achieve a favourable outcome.',
     name: 'Muhammad Imran',
     company: 'WUSUK',
   },
@@ -27,5 +27,12 @@ export const testimonials: Testimonial[] = [
       'The firm provided thorough legal support on our corporate and compliance requirements. Their attention to detail and commitment to our interests were evident throughout the engagement.',
     name: 'Muhammad Imran',
     company: 'KAIL',
+  },
+  {
+    id: 'hammad-khattak',
+    quote:
+      'Wazirzada Law Associates represented us in a complex litigation matter with exceptional skill and determination. Their courtroom advocacy, clear strategy, and consistent updates gave us confidence throughout the proceedings. We highly recommend their litigation practice to anyone seeking capable and reliable legal representation.',
+    name: 'Hammad Khattak',
+    role: 'Client',
   },
 ]

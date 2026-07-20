@@ -6,6 +6,7 @@ import About from './pages/About'
 import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
 import Pricing from './pages/Pricing'
+import ADR from './pages/ADR'
 import Contact from './pages/Contact'
 import Career from './pages/Career'
 
@@ -66,6 +67,14 @@ export default function App() {
             element={
               <AnimatedPage>
                 <Pricing />
+              </AnimatedPage>
+            }
+          />
+          <Route
+            path="/adr"
+            element={
+              <AnimatedPage>
+                <ADR />
               </AnimatedPage>
             }
           />

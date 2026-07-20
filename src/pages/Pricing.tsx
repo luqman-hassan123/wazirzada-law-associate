@@ -5,7 +5,18 @@ import PageHero from '../components/ui/PageHero'
 import SectionHeading from '../components/ui/SectionHeading'
 import Button from '../components/ui/Button'
 
-const plans = [
+type Plan = {
+  name: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  href?: string
+  cta?: string
+}
+
+const plans: Plan[] = [
   {
     name: 'Consultation',
     price: 'PKR 15,000',
@@ -34,6 +45,23 @@ const plans = [
     popular: true,
   },
   {
+    name: 'Litigation',
+    price: 'Custom',
+    period: 'case-based',
+    description:
+      'Representation before courts and tribunals with competitive, tailored fees based on complexity, duration, and forum.',
+    features: [
+      'Civil & commercial litigation',
+      'Original & appellate forums',
+      'Individual case assessment',
+      'Consolidated multi-case rates',
+      'Transparent expense billing',
+    ],
+    popular: false,
+    href: '/services/litigation',
+    cta: 'View Practice Area',
+  },
+  {
     name: 'Corporate',
     price: 'Custom',
     period: 'tailored',
@@ -47,6 +75,22 @@ const plans = [
       'Custom SLA agreements',
     ],
     popular: false,
+  },
+  {
+    name: 'ADR & Mediation',
+    price: 'Custom',
+    period: 'case-based',
+    description: 'Arbitration, mediation, and negotiation to resolve disputes outside the courtroom.',
+    features: [
+      'Mediation & arbitration',
+      'Negotiation & settlement',
+      'Award enforcement support',
+      'Accredited ADR panel',
+      'Confidential process',
+    ],
+    popular: false,
+    href: '/adr',
+    cta: 'Learn About ADR',
   },
 ]
 
@@ -65,18 +109,20 @@ export default function Pricing() {
             title="Choose Your Plan"
             description="All plans include a confidential initial assessment. Contact us for custom enterprise solutions."
           />
-          <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-6">
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
+                transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -12, rotateY: plan.popular ? 0 : 3 }}
-                className={`perspective-1000 relative rounded-2xl border p-5 transition-shadow hover:shadow-2xl sm:p-8 ${
+                className={`perspective-1000 relative flex flex-col rounded-2xl border p-5 transition-shadow hover:shadow-2xl sm:p-6 lg:col-span-2 ${
+                  i === 3 ? 'lg:col-start-2' : ''
+                } ${
                   plan.popular
-                    ? 'border-gold-400 bg-navy-900 text-white shadow-xl shadow-navy-900/20 sm:col-span-2 lg:col-span-1'
+                    ? 'border-gold-400 bg-navy-900 text-white shadow-xl shadow-navy-900/20'
                     : 'border-cream-200 bg-white shadow-sm'
                 }`}
               >
@@ -107,12 +153,12 @@ export default function Pricing() {
                 >
                   {plan.description}
                 </p>
-                <ul className="mt-6 space-y-2.5 sm:mt-8 sm:space-y-3">
+                <ul className="mt-5 flex-1 space-y-2 sm:mt-6 sm:space-y-2.5">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-sm sm:items-center sm:gap-3">
+                    <li key={feature} className="flex items-start gap-2.5 text-sm sm:gap-3">
                       <Check
                         size={16}
-                        className={`mt-0.5 shrink-0 sm:mt-0 ${plan.popular ? 'text-gold-400' : 'text-gold-500'}`}
+                        className={`mt-0.5 shrink-0 ${plan.popular ? 'text-gold-400' : 'text-gold-500'}`}
                       />
                       <span className={plan.popular ? 'text-white/80' : 'text-navy-700/70'}>
                         {feature}
@@ -120,10 +166,10 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 sm:mt-8">
-                  <Link to="/contact">
+                <div className="mt-5 sm:mt-6">
+                  <Link to={plan.href ?? '/contact'}>
                     <Button variant={plan.popular ? 'primary' : 'secondary'} className="w-full">
-                      Get Started
+                      {plan.cta ?? 'Get Started'}
                     </Button>
                   </Link>
                 </div>

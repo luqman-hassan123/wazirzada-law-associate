@@ -1,20 +1,47 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
-import { siteConfig } from '../../data/site'
+import { navLinks, siteConfig } from '../../data/site'
 import SiteLogo from '../ui/SiteLogo'
+
+const usefulLinks = [
+  { label: 'Terms & Conditions', path: '/contact' },
+  { label: 'Privacy Policy', path: '/contact' },
+  { label: 'Disclaimer', path: '/contact' },
+  { label: 'FAQ', path: '/contact' },
+]
 
 export default function Footer() {
   return (
     <footer className="bg-navy-900 text-white">
       <div className="container-main py-12 sm:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4">
           <div>
-            <div className="mb-4">
+            <Link to="/" className="mb-4 inline-flex items-center gap-3">
               <SiteLogo size="footer" />
-            </div>
-            <p className="text-sm leading-relaxed text-white/60">
+              <span className="text-xl font-semibold tracking-wide text-gold-400">WLA</span>
+            </Link>
+            <p className="mt-2 text-sm font-medium text-white/80">{siteConfig.name}</p>
+            <p className="mt-2 text-sm leading-relaxed text-white/60">
               Experienced, skilled, knowledgeable, adept, compassionate.
             </p>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold-400">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              {navLinks.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className="text-sm text-white/60 transition-colors hover:text-gold-400"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
@@ -22,13 +49,13 @@ export default function Footer() {
               Useful Links
             </h4>
             <ul className="space-y-2">
-              {['Terms & Conditions', 'Privacy Policy', 'Disclaimer', 'FAQ'].map((item) => (
-                <li key={item}>
+              {usefulLinks.map((item) => (
+                <li key={item.label}>
                   <Link
-                    to="/contact"
+                    to={item.path}
                     className="text-sm text-white/60 transition-colors hover:text-gold-400"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}

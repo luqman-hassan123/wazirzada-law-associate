@@ -29,8 +29,8 @@ export const siteConfig = {
       id: 'di-khan',
       name: 'D.I. Khan Branch',
       address: 'D.I. Khan, Khyber Pakhtunkhwa, Pakistan',
+      phone: '(051) 6112374',
       contactPerson: 'Atif Ali Khan',
-      mobile: '+92 345 9871007',
     },
   ],
   /**
@@ -65,6 +65,7 @@ export const navLinks = [
     ],
   },
   { label: 'Pricing', path: '/pricing' },
+  { label: 'ADR', path: '/adr' },
   { label: 'Careers', path: '/careers' },
   { label: 'Contact', path: '/contact' },
 ]
