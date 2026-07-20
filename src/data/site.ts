@@ -28,7 +28,7 @@ export const siteConfig = {
     {
       id: 'di-khan',
       name: 'D.I. Khan Branch',
-      address: 'D.I. Khan, Khyber Pakhtunkhwa, Pakistan',
+      address: 'Wazirzada House, Ratha Kulachi, D.I. Khan',
       phone: '(051) 6112374',
       contactPerson: 'Atif Ali Khan',
     },
