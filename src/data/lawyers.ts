@@ -24,6 +24,7 @@ export const TEAM_PHOTO_SLUGS = new Set([
   "atif-ali-khan",
   "asfandyar-zeb-khan",
   "ilyas-azhar-khan",
+  "abd-Ullah",
 ]);
 
 const teamPhoto = (slug: string) =>
@@ -155,11 +156,12 @@ export const lawyers: Lawyer[] = [
   },
   {
     id: "14",
-    slug: "abdullah",
+    slug: "abd-Ullah",
     name: "Abdullah",
     title: "Trainee",
     credentials: "Wazirzada Law Associates",
     bio: "Abdullah is serving as a Trainee at Wazirzada Law Associates, assisting with legal research, case preparation, and client support while developing his skills under the guidance of senior partners.",
+    image: teamPhoto("abd-Ullah")
   },
 ];
 
